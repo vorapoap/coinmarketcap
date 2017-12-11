@@ -1,5 +1,5 @@
 {
-    "name": vorapoap/coinmarketcap-db",
+    "name": "vorapoap/coinmarketcap-db",
     "description": "Access Coinmarketcap.com via local database wrapper",
     "require": {
         "php": ">=5.3.0"
