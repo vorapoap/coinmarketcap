@@ -61,5 +61,5 @@ $coin->getCoin("btc");
 
 If you like this work and like to donate:
 
-BTC:	13SsoAUNv1KobhnDSZytLo71NHAGu9XxUd
-ETH:	0x1E0d07890Cb550F18eE6B80dC5739CFe776C72b5
+ - BTC:	13SsoAUNv1KobhnDSZytLo71NHAGu9XxUd
+ - ETH:	0x1E0d07890Cb550F18eE6B80dC5739CFe776C72b5
