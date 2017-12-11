@@ -103,9 +103,8 @@ class Coinmarketcap
                 $stmt->bindParam(':' . $k, $data[$rowno][$k], PDO::PARAM_STR);
             }
             $stmt->execute();
-            return TRUE;
         }
-        return FALSE;
+        return TRUE;
     }
 
     public function getAllCoinData() {
