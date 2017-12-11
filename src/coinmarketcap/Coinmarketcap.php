@@ -19,9 +19,9 @@ class Coinmarketcap
     protected $defaultUpdateInterval;
 
     public function __construct(array $config) {
-        if ($config['pdo'])
-            $this->pdo = $pdo;
-        elseif ($config['dsn']) {
+        if (isset($config['pdo']))
+            $this->pdo = $config['pdo'];
+        elseif (isset($config['dsn'])) {
             $dsn = $config['dsn'];
             $this->pdo = new PDO($dsn);
         } else {
@@ -30,11 +30,16 @@ class Coinmarketcap
             $this->pdo = new PDO($dsn, $config['user'], $config['password'], $options);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         }
-        $this->defaultLimit = $config['coinmarketcap-limit'];
+        if (isset($config['coinmarketcap-limit'])) {
+            $this->defaultLimit = $config['coinmarketcap-limit'];
+        }
         if (!$this->defaultLimit) $this->defaultLimit = 200;
-        $this->defaultUpdateInterval = $config['coinmarketcap-update-interval'];
+        if (isset($config['coinmarketcap-update-interval'])) {
+            $this->defaultUpdateInterval = $config['coinmarketcap-update-interval'];
+        }
         if (!$this->defaultUpdateInterval) $this->defaultUpdateInterval = 60;
 
+        if (!isset($config['prefix'])) $config['prefix'] = '';
         $this->tableName = $config['prefix'] . 'coinmarketcap';
         $this->install();
     }
