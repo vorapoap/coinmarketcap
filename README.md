@@ -36,7 +36,7 @@ On object constructing, the table will be checked for existence. If the table do
 
 Other options
 | prefix | Table prefix |
-| ------ | ------------ |
+| --- | --- |
 | coinmarketcap-limit |  Default is 100 (See [https://coinmarketcap.com/api/]) |
 | coinmarketcap-update-interval | Update interval, default is 60s | 
 
