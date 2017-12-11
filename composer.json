@@ -1,5 +1,5 @@
 {
-    "name": "vorapoap/coinmarketcap-db",
+    "name": "vorapoap/coinmarketcap",
     "description": "Access Coinmarketcap.com via local database wrapper",
     "license": "MIT",
     "authors": [
