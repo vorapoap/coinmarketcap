@@ -32,12 +32,13 @@ and run ```composer update```  or run this command in your command line:
 ```sh
 $coin = new Coinmarketcap($options);
 ```
-On object constructing, the table will be checked for existence. If the table doesn't exist, the required table is create, you can also define $options['prefix'] to prefix the table.
+On object constructing, the table will be checked for existence. If the table doesn't exist, the required table *coinmarketcap* is created, you can also define $options['prefix'] to prefix the table.
 
 *Other options*
 
 | Name | Description |
 | --- | -- |
+| prefix | Table prefix, default is none |
 | coinmarketcap-limit |  Default is 100 (See [https://coinmarketcap.com/api/]) |
 | coinmarketcap-update-interval | Update interval, default is 60s | 
 
