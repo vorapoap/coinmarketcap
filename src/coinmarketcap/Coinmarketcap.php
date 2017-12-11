@@ -115,7 +115,7 @@ class Coinmarketcap
         return $rows;
     }
 
-    protected function getCoin($ticker) {
+    public function getCoin($ticker) {
         $this->checkToUpdate();
         $stmt = $this->pdo->prepare("SELECT * FROM " . $this->tableName." WHERE `id` = :id OR `name` = :id OR LOWER(`symbol`) = :id");
         $stmt->bindParam(':id', $ticker);
