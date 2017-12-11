@@ -34,9 +34,10 @@ $coin = new Coinmarketcap($options);
 ```
 On object constructing, the table will be checked for existence. If the table doesn't exist, the required table is create, you can also define $options['prefix'] to prefix the table.
 
-Other options
-| prefix | Table prefix |
-| --- | --- |
+*Other options*
+
+| Name | Description |
+| --- | -- |
 | coinmarketcap-limit |  Default is 100 (See [https://coinmarketcap.com/api/]) |
 | coinmarketcap-update-interval | Update interval, default is 60s | 
 
