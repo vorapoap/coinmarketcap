@@ -51,7 +51,7 @@ class Coinmarketcap
                 `symbol` VARCHAR(8) NOT NULL,
                 `rank` INT(11) NOT NULL,
                 `price_usd` DECIMAL(10,2) NOT NULL,
-                `price_btc` DECIMAL(10,2) NOT NULL,
+                `price_btc` DECIMAL(10,10) NOT NULL,
                 `24h_volume_usd` DECIMAL(10,2) NOT NULL,
                 `market_cap_usd` DECIMAL(10,2) NOT NULL,
                 `available_supply` BIGINT(20) NOT NULL,
