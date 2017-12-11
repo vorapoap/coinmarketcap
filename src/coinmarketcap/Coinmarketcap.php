@@ -52,10 +52,10 @@ class Coinmarketcap
                 `rank` INT(11) NOT NULL,
                 `price_usd` DECIMAL(10,2) NOT NULL,
                 `price_btc` DECIMAL(10,10) NOT NULL,
-                `24h_volume_usd` DECIMAL(10,2) NOT NULL,
-                `market_cap_usd` DECIMAL(10,2) NOT NULL,
-                `available_supply` BIGINT(20) NOT NULL,
-                `total_supply` BIGINT(20) NOT NULL,
+                `24h_volume_usd` DECIMAL(10,2) NULL DEFAULT NULL,
+                `market_cap_usd` DECIMAL(10,2) NULL DEFAULT NULL,
+                `available_supply` BIGINT(20) NULL DEFAULT NULL,
+                `total_supply` BIGINT(20) NULL DEFAULT NULL,
                 `max_supply` BIGINT(20) NULL DEFAULT NULL,
                 `percent_change_1h` DECIMAL(4,2) NOT NULL,
                 `percent_change_24h` DECIMAL(4,2) NOT NULL,
@@ -64,7 +64,11 @@ class Coinmarketcap
                 PRIMARY KEY (`id`),
                 INDEX `name` (`name`),
                 INDEX `symbol` (`symbol`)
-            ) COLLATE='utf8_general_ci' ENGINE=InnoDB;";
+            )
+            COLLATE='utf8_general_ci'
+            ENGINE=InnoDB
+            ;
+            ";
         try {
             $this->pdo->query("SELECT 1 FROM {$this->tableName} LIMIT 1");
         } catch (Exception $e) {
